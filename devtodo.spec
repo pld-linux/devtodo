@@ -9,8 +9,8 @@ Source0:	http://devtodo.sourceforge.net/?%{version}/%{name}-%{version}.tar.gz
 Patch0:		%{name}-include.patch
 Patch1:		%{name}-am_fix.patch
 URL:		http://devtodo.sourceforge.net/
-BuildRequires:  autoconf
-BuildRequires:  automake
+BuildRequires:	autoconf
+BuildRequires:	automake
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
 %description
