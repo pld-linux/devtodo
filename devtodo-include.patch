@@ -1,0 +1,12 @@
+diff -urN aaa/devtodo-0.1.13/src/todoterm.cc devtodo-0.1.13/src/todoterm.cc
+--- aaa/devtodo-0.1.13/src/todoterm.cc	Thu Nov  8 11:51:20 2001
++++ devtodo-0.1.13/src/todoterm.cc	Mon Jun 10 22:24:43 2002
+@@ -5,7 +5,7 @@
+ #include <string>
+ #include <stdexcept>
+ #include <curses.h>
+-#include <term.h>
++#include <ncurses/term.h>
+ 
+ static char info[2048];
+ 
