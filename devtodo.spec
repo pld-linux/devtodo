@@ -50,7 +50,8 @@ rm -f missing
 
 %install
 rm -rf $RPM_BUILD_ROOT
-%{__make} install DESTDIR=$RPM_BUILD_ROOT
+%{__make} install \
+	DESTDIR=$RPM_BUILD_ROOT
 
 rm -f $RPM_BUILD_ROOT%{_mandir}/man1/{tda,tdd,tde,tdl,tdr,todo}.1*
 echo ".so devtodo.1" > $RPM_BUILD_ROOT%{_mandir}/man1/tda.1
