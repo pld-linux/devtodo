@@ -1,28 +1,16 @@
 diff -urN aaa/devtodo-0.1.14/src/Makefile.am devtodo-0.1.14/src/Makefile.am
 --- aaa/devtodo-0.1.14/src/Makefile.am	Tue Jul 10 19:10:00 2001
 +++ devtodo-0.1.14/src/Makefile.am	Tue Jul 23 23:53:21 2002
-@@ -5,14 +5,7 @@
- 	
+@@ -5,12 +5,6 @@
  devtodo_LDADD=../util/libutil.la
  INCLUDES=-I../util
--LIBS+=@READLINE_LIBS@
+ LIBS=@READLINE_LIBS@
 -
 -if DEBUG
 -CPPFLAGS=-g
 -else
 -CPPFLAGS+=-DNDEBUG
--LDFLAGS=-s
 -endif
-+LIBS=@LIBS@ @READLINE_LIBS@
  
  install-exec-hook:
  	cd $(DESTDIR)$(bindir); for i in $(binlinks); do $(LN_S) -f devtodo $$i; done
-diff -urN aaa/devtodo-0.1.14/util/Makefile.am devtodo-0.1.14/util/Makefile.am
---- aaa/devtodo-0.1.14/util/Makefile.am	Tue Jun 26 11:51:12 2001
-+++ devtodo-0.1.14/util/Makefile.am	Tue Jul 23 23:32:17 2002
-@@ -3,5 +3,4 @@
- 	Regex.cc Regex.h XML.cc XML.h Strings.cc Strings.h CommandArgs.cc CommandArgs.h
- 
- rebuild:
--	#crash-module --verbose --extract --trim --overwrite --exclude Signal --module XML String Terminal CommandArgs --join 50,lib
- 	crash-module -veto --exclude Signal --module XML Strings Terminal CommandArgs --join 50,lib
