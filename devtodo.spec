@@ -1,13 +1,16 @@
 Summary:	Todo list managment
 Summary(pl):	Zarz±dzanie list± spraw do zrobienia
 Name:		devtodo
-Version:	0.1.13
+Version:	0.1.14
 Release:	1
 License:	GPL
 Group:		Development/Tools
-Source0:	http://devtodo.sourceforge.net/?0.1.13/%{name}-%{version}.tar.gz
+Source0:	http://devtodo.sourceforge.net/?%{version}/%{name}-%{version}.tar.gz
 Patch0:		%{name}-include.patch
+Patch1:		%{name}-am_fix.patch
 URL:		http://devtodo.sourceforge.net/
+BuildRequires:  autoconf
+BuildRequires:  automake
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
 %description
@@ -33,8 +36,13 @@ katalogu.
 %prep
 %setup -q
 %patch0 -p1
+%patch1 -p1
 
 %build
+rm -f missing
+aclocal
+%{__autoconf}
+%{__automake}
 %configure \
 	--enable-shared
 %{__make}
