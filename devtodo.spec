@@ -2,7 +2,7 @@ Summary:	Todo list managment
 Summary(pl):	Zarz±dzanie list± spraw do zrobienia
 Name:		devtodo
 Version:	0.1.17
-Release:	1
+Release:	2
 License:	GPL
 Group:		Development/Tools
 Source0:	http://devtodo.sourceforge.net/?%{version}/%{name}-%{version}.tar.gz
@@ -51,10 +51,11 @@ rm -f missing
 rm -rf $RPM_BUILD_ROOT
 %{__make} install DESTDIR=$RPM_BUILD_ROOT
 
-rm -f $RPM_BUILD_ROOT%{_mandir}/man1/{tda,tdd,tde,tdr,todo}.1.gz
+rm -f $RPM_BUILD_ROOT%{_mandir}/man1/{tda,tdd,tde,tdl,tdr,todo}.1*
 echo ".so devtodo.1" > $RPM_BUILD_ROOT%{_mandir}/man1/tda.1
 echo ".so devtodo.1" > $RPM_BUILD_ROOT%{_mandir}/man1/tdd.1
 echo ".so devtodo.1" > $RPM_BUILD_ROOT%{_mandir}/man1/tde.1
+echo ".so devtodo.1" > $RPM_BUILD_ROOT%{_mandir}/man1/tdl.1
 echo ".so devtodo.1" > $RPM_BUILD_ROOT%{_mandir}/man1/tdr.1
 echo ".so devtodo.1" > $RPM_BUILD_ROOT%{_mandir}/man1/todo.1
 
