@@ -6,6 +6,7 @@ Release:	2
 License:	GPL
 Group:		Development/Tools
 Source0:	http://devtodo.sourceforge.net/?%{version}/%{name}-%{version}.tar.gz
+# Source0-md5:	cc3cdd3064eaa7270191bee63d3b1a2c
 Patch0:		%{name}-include.patch
 Patch1:		%{name}-am_fix.patch
 URL:		http://devtodo.sourceforge.net/
