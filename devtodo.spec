@@ -2,7 +2,7 @@ Summary:	Todo list managment
 Summary(pl):	Zarz±dzanie list± spraw do zrobienia
 Name:		devtodo
 Version:	0.1.18
-Release:	2
+Release:	3
 License:	GPL
 Group:		Development/Tools
 Source0:	http://swapoff.org/files/devtodo/%{name}-%{version}.tar.gz
