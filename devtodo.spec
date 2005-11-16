@@ -5,11 +5,12 @@ Version:	0.1.18
 Release:	3
 License:	GPL
 Group:		Development/Tools
+#Source0Download: http://swapoff.org/DevTodo
 Source0:	http://swapoff.org/files/devtodo/%{name}-%{version}.tar.gz
 # Source0-md5:	6ca0a414685cb7a7f32f7ae22cb3a2a9
 Patch0:		%{name}-include.patch
 Patch1:		%{name}-am_fix.patch
-URL:		http://swapoff.org/DevTodo/
+URL:		http://swapoff.org/DevTodo
 BuildRequires:	autoconf
 BuildRequires:	automake
 BuildRequires:	libstdc++-devel
@@ -44,7 +45,6 @@ katalogu.
 %patch1 -p1
 
 %build
-rm -f missing
 %{__aclocal}
 %{__autoconf}
 %{__automake}
