@@ -1,13 +1,13 @@
 Summary:	Todo list managment
 Summary(pl):	Zarz±dzanie list± spraw do zrobienia
 Name:		devtodo
-Version:	0.1.18
-Release:	3
+Version:	0.1.19
+Release:	1
 License:	GPL
 Group:		Development/Tools
 #Source0Download: http://swapoff.org/DevTodo
 Source0:	http://swapoff.org/files/devtodo/%{name}-%{version}.tar.gz
-# Source0-md5:	6ca0a414685cb7a7f32f7ae22cb3a2a9
+# Source0-md5:	723c86eae76c425ab9f271760bb951a3
 Patch0:		%{name}-include.patch
 Patch1:		%{name}-am_fix.patch
 URL:		http://swapoff.org/DevTodo
@@ -71,7 +71,7 @@ rm -rf $RPM_BUILD_ROOT
 
 %files
 %defattr(644,root,root,755)
-%doc AUTHORS ChangeLog NEWS QuickStart README TODO doc/todorc.example doc/*sh
+%doc AUTHORS ChangeLog NEWS QuickStart README doc/todorc.example doc/*sh
 %attr(755,root,root) %{_bindir}/*
 %{_mandir}/man1/*
 %config(noreplace) %verify(not md5 mtime size) %{_sysconfdir}/*
