@@ -1,5 +1,5 @@
 Summary:	Todo list managment
-Summary(pl.UTF-8):   Zarządzanie listą spraw do zrobienia
+Summary(pl.UTF-8):	Zarządzanie listą spraw do zrobienia
 Name:		devtodo
 Version:	0.1.19
 Release:	1
