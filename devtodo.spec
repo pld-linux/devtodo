@@ -1,5 +1,5 @@
 Summary:	Todo list managment
-Summary(pl):	Zarz±dzanie list± spraw do zrobienia
+Summary(pl.UTF-8):   ZarzÄ…dzanie listÄ… spraw do zrobienia
 Name:		devtodo
 Version:	0.1.19
 Release:	1
@@ -28,15 +28,15 @@ default builtins. Specifically, cd, pushd and popd are overridden so
 that when using one of these commands to enter a directory, the todo
 will display any outstanding items in that directory.
 
-%description -l pl
-Developer Todo jest programem do wy¶wietlania i zarz±dzania
-hierarchiczn±, list± zaleg³ych prac z wyznaczonymi priorytetami, lub
+%description -l pl.UTF-8
+Developer Todo jest programem do wyÅ›wietlania i zarzÄ…dzania
+hierarchicznÄ…, listÄ… zalegÅ‚ych prac z wyznaczonymi priorytetami, lub
 po prostu przypomnieniami.
 
-Sam program jest wspomagany kilkoma skryptami pow³oki, które zastêpuj±
-domy¶lne, wbudowane polecenia, takie jak cd, pushd i popd. Jest to
-potrzebne aby podczas wchodzenia do katalogu, przy u¿yciu wymienionych
-komend, wypisywana by³a lista zaleg³ych rzeczy do zrobienia w danym
+Sam program jest wspomagany kilkoma skryptami powÅ‚oki, ktÃ³re zastÄ™pujÄ…
+domyÅ›lne, wbudowane polecenia, takie jak cd, pushd i popd. Jest to
+potrzebne aby podczas wchodzenia do katalogu, przy uÅ¼yciu wymienionych
+komend, wypisywana byÅ‚a lista zalegÅ‚ych rzeczy do zrobienia w danym
 katalogu.
 
 %prep
