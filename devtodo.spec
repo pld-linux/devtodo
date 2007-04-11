@@ -10,6 +10,7 @@ Source0:	http://swapoff.org/files/devtodo/%{name}-%{version}.tar.gz
 # Source0-md5:	723c86eae76c425ab9f271760bb951a3
 Patch0:		%{name}-include.patch
 Patch1:		%{name}-am_fix.patch
+Patch2:		%{name}-gcc4.patch
 URL:		http://swapoff.org/DevTodo
 BuildRequires:	autoconf
 BuildRequires:	automake
@@ -43,6 +44,7 @@ katalogu.
 %setup -q
 %patch0 -p1
 %patch1 -p1
+%patch2 -p1
 
 %build
 %{__aclocal}
