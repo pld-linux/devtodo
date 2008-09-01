@@ -8,8 +8,8 @@ Group:		Development/Tools
 #Source0Download: http://swapoff.org/DevTodo
 Source0:	http://swapoff.org/files/devtodo/%{name}-%{version}.tar.gz
 # Source0-md5:	4a6241437cb56f237f850bcd2233c3c4
-URL:		http://swapoff.org/DevTodo
 Patch0:		devtodo-stdlib_fix.patch
+URL:		http://swapoff.org/DevTodo
 BuildRequires:	autoconf
 BuildRequires:	automake
 BuildRequires:	libstdc++-devel
@@ -43,12 +43,13 @@ katalogu.
 %patch0 -p1
 
 %build
-%{__aclocal}
 %{__libtoolize}
+%{__aclocal}
 %{__autoconf}
 %{__automake}
 %configure \
-	--enable-shared CPPFLAGS="%{rpmcppflags} -I/usr/include/ncurses"
+	CPPFLAGS="%{rpmcppflags} -I/usr/include/ncurses" \
+	--enable-shared
 %{__make}
 
 %install
