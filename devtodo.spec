@@ -8,7 +8,7 @@ Group:		Development/Tools
 #Source0Download: http://swapoff.org/DevTodo
 Source0:	http://swapoff.org/files/devtodo/%{name}-%{version}.tar.gz
 # Source0-md5:	4a6241437cb56f237f850bcd2233c3c4
-Patch0:		devtodo-stdlib_fix.patch
+Patch0:		%{name}-stdlib_fix.patch
 URL:		http://swapoff.org/DevTodo
 BuildRequires:	autoconf
 BuildRequires:	automake
