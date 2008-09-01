@@ -1,17 +1,15 @@
 Summary:	Todo list managment
 Summary(pl.UTF-8):	Zarządzanie listą spraw do zrobienia
 Name:		devtodo
-Version:	0.1.19
+Version:	0.1.20
 Release:	1
 License:	GPL
 Group:		Development/Tools
 #Source0Download: http://swapoff.org/DevTodo
 Source0:	http://swapoff.org/files/devtodo/%{name}-%{version}.tar.gz
-# Source0-md5:	723c86eae76c425ab9f271760bb951a3
-Patch0:		%{name}-include.patch
-Patch1:		%{name}-am_fix.patch
-Patch2:		%{name}-gcc4.patch
+# Source0-md5:	4a6241437cb56f237f850bcd2233c3c4
 URL:		http://swapoff.org/DevTodo
+Patch0:		devtodo-stdlib_fix.patch
 BuildRequires:	autoconf
 BuildRequires:	automake
 BuildRequires:	libstdc++-devel
@@ -43,15 +41,14 @@ katalogu.
 %prep
 %setup -q
 %patch0 -p1
-%patch1 -p1
-%patch2 -p1
 
 %build
 %{__aclocal}
+%{__libtoolize}
 %{__autoconf}
 %{__automake}
 %configure \
-	--enable-shared
+	--enable-shared CPPFLAGS="%{rpmcppflags} -I/usr/include/ncurses"
 %{__make}
 
 %install
