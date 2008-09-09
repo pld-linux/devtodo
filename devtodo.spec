@@ -2,7 +2,7 @@ Summary:	Todo list managment
 Summary(pl.UTF-8):	Zarządzanie listą spraw do zrobienia
 Name:		devtodo
 Version:	0.1.20
-Release:	1
+Release:	2
 License:	GPL
 Group:		Development/Tools
 #Source0Download: http://swapoff.org/DevTodo
@@ -73,5 +73,5 @@ rm -rf $RPM_BUILD_ROOT
 %defattr(644,root,root,755)
 %doc AUTHORS ChangeLog NEWS QuickStart README doc/todorc.example doc/*sh
 %attr(755,root,root) %{_bindir}/*
-%{_mandir}/man1/*
 %config(noreplace) %verify(not md5 mtime size) %{_sysconfdir}/*
+%{_mandir}/man1/*
