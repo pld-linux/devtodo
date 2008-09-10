@@ -8,6 +8,8 @@ Group:		Development/Tools
 #Source0Download: http://swapoff.org/DevTodo
 Source0:	http://swapoff.org/files/devtodo/%{name}-%{version}.tar.gz
 # Source0-md5:	4a6241437cb56f237f850bcd2233c3c4
+Source1:	%{name}.sh
+Source2:	%{name}.ch
 Patch0:		%{name}-stdlib_fix.patch
 URL:		http://swapoff.org/DevTodo
 BuildRequires:	autoconf
@@ -54,6 +56,7 @@ katalogu.
 
 %install
 rm -rf $RPM_BUILD_ROOT
+install -d $RPM_BUILD_ROOT/etc/profile.d
 
 %{__make} install \
 	DESTDIR=$RPM_BUILD_ROOT
@@ -66,12 +69,16 @@ echo ".so devtodo.1" > $RPM_BUILD_ROOT%{_mandir}/man1/tdl.1
 echo ".so devtodo.1" > $RPM_BUILD_ROOT%{_mandir}/man1/tdr.1
 echo ".so devtodo.1" > $RPM_BUILD_ROOT%{_mandir}/man1/todo.1
 
+install %{SOURCE1} $RPM_BUILD_ROOT/etc/profile.d
+install %{SOURCE2} $RPM_BUILD_ROOT/etc/profile.d
+
 %clean
 rm -rf $RPM_BUILD_ROOT
 
 %files
 %defattr(644,root,root,755)
 %doc AUTHORS ChangeLog NEWS QuickStart README doc/todorc.example doc/*sh
-%attr(755,root,root) %{_bindir}/*
+%config(noreplace,missingok) %verify(not md5 mtime size) /etc/profile.d/*
 %config(noreplace) %verify(not md5 mtime size) %{_sysconfdir}/*
+%attr(755,root,root) %{_bindir}/*
 %{_mandir}/man1/*
