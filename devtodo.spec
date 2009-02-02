@@ -9,7 +9,7 @@ Group:		Development/Tools
 Source0:	http://swapoff.org/files/devtodo/%{name}-%{version}.tar.gz
 # Source0-md5:	4a6241437cb56f237f850bcd2233c3c4
 Source1:	%{name}.sh
-Source2:	%{name}.ch
+Source2:	%{name}.csh
 Patch0:		%{name}-stdlib_fix.patch
 URL:		http://swapoff.org/DevTodo
 BuildRequires:	autoconf
